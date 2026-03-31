@@ -1,0 +1,38 @@
+# Core API & Server
+fastapi==0.111.0
+uvicorn[standard]==0.30.1
+openai==1.35.3
+python-dotenv==1.0.1
+pydantic==2.7.4
+httpx==0.27.0
+sse-starlette==2.1.2
+
+# LLM Serving
+vllm==0.5.0
+autoawq==0.2.5
+autoawq-kernels==0.0.6
+
+# Training & Fine-Tuning
+transformers==4.42.3
+datasets==2.20.0
+peft==0.11.1
+trl==0.9.4
+accelerate==0.32.0
+bitsandbytes==0.43.1
+scipy==1.13.1
+sentencepiece==0.2.0
+protobuf==4.25.3
+
+# ML Utilities
+torch==2.3.1
+torchvision==0.18.1
+torchaudio==2.3.1
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.5.0
+
+# Experiment Tracking
+wandb==0.17.3
+
+# Tokenization
+tiktoken==0.7.0
