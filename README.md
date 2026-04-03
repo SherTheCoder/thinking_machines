@@ -6,7 +6,7 @@
 
 ## Abstract
 
-This project presents the design, implementation, and systems-engineering of a production-ready AI-powered teaching platform for Advanced Algorithms course, as taught to third year Btech students. The centrepiece is a Socratic AI Teaching Assistant, a fine-tuned large language model that refuses to provide direct solutions, instead guiding students through probing questions about time/space complexity, loop invariants, and algorithmic correctness.
+This project presents the replication of the design, implementation, and systems-engineering of a production-ready AI-powered teaching platform that I created for the Advanced Algorithms course, as taught to third year Btech students. Instead of real course data as in the original project, I'm using generated data in the repo. The centrepiece is a Socratic AI Teaching Assistant, a fine-tuned large language model that refuses to provide direct solutions, instead guiding students through probing questions about time/space complexity, loop invariants, and algorithmic correctness.
 
 The system was engineered to serve **80 concurrent student sessions on a single NVIDIA A100 80GB GPU** without Out-of-Memory (OOM) errors. This required a systematic migration from standard 4-bit quantisation (BitsAndBytes NF4) to **Activation-aware Weight Quantisation (AWQ)** for memory efficiency, combined with **vLLM's continuous batching and PagedAttention** for throughput. The result is a system that maintains sub-2-second time-to-first-token (TTFT) under full load while consuming approximately 4 GB for model weights — an 4× reduction from the 16 GB BF16 baseline.
 
